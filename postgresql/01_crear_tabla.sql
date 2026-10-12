@@ -27,6 +27,18 @@ INSERT INTO estudiantes VALUES(12, 'Samuel', 'Gallegos', 14, 'Artes', '2026-04-1
 INSERT INTO estudiantes VALUES(13, 'Julian', 'Ramirez', 7, 'Ingles', '2023-10-12');
 INSERT INTO estudiantes VALUES(14, 'Luciana', 'Muñoz', 13, 'Musica', '2024-06-25');
 INSERT INTO estudiantes VALUES(15, 'Mariana', 'Alfonso', 25, 'Estetica', '2025-10-11');
+INSERT INTO estudiantes VALUES(16, 'Tatiana', 'Rojas', 16, 'Base de Datos', '2026-09-27');
 --Consultas SELECT
 SELECT * FROM estudiantes;
-
+--Mostrar unicamente nombres y curso
+SELECT nombres, curso FROM estudiantes;
+--Mostrar mayores de 18 
+SELECT * FROM estudiantes WHERE edad > 18;
+--Mostrar rango entre 18 y 25
+SELECT * FROM  estudiantes WHERE edad BETWEEN 18 AND 25;
+--Mostrar estudiante del curso Badee de Datos
+SELECT * FROM estudiantes WHERE curso = 'Base de Datos';
+--Mostrar estudiantes reegiestrados despues de 2026-03-01
+SELECT * FROM estudiantes WHERE fecha_registro > '2026-03-01';
+--Mostrar estudiantes registrados entre 2026-01-01 y 2026-04-30
+SELECT * FROM estudiantes WHERE  fecha_registro BETWEEN '2026-01-01' AND '2026-04-30';
