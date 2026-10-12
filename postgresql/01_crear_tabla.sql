@@ -1,6 +1,6 @@
---Eliminar una tabla
+-- Eliminar una tabla
 drop table if exists estudiantes;
---Crear una tabla
+-- Crear una tabla
 CREATE TABLE estudiantes(
 	id_estudiante INT,
 	nombres varchar(50),
@@ -8,10 +8,10 @@ CREATE TABLE estudiantes(
 	edad INT,
 	curso varchar(50),
 	fecha_registro varchar(10),
---Creacion de clave primaria
+-- Creacion de clave primaria
 constraint estudiantes_pk primary key(id_estudiante)
 );
---Insercion de 15 estudaintes 
+-- Insercion de 15 estudaintes 
 INSERT INTO estudiantes VALUES(1, 'David', 'Tellez', 44, 'Marketing', '2026-01-10');
 INSERT INTO estudiantes VALUES(2, 'Juan', 'Perez', 16, 'Herramientas modernas', '2024-05-23');
 INSERT INTO estudiantes VALUES(3, 'Ana', 'Lopez', 23, 'Finanzas y negocios', '2026-06-10');
@@ -28,17 +28,17 @@ INSERT INTO estudiantes VALUES(13, 'Julian', 'Ramirez', 7, 'Ingles', '2023-10-12
 INSERT INTO estudiantes VALUES(14, 'Luciana', 'Muñoz', 13, 'Musica', '2024-06-25');
 INSERT INTO estudiantes VALUES(15, 'Mariana', 'Alfonso', 25, 'Estetica', '2025-10-11');
 INSERT INTO estudiantes VALUES(16, 'Tatiana', 'Rojas', 16, 'Base de Datos', '2026-09-27');
---Consultas SELECT
+-- Consultas SELECT
 SELECT * FROM estudiantes;
---Mostrar unicamente nombres y curso
+-- Mostrar unicamente nombres y curso
 SELECT nombres, curso FROM estudiantes;
---Mostrar mayores de 18 
+-- Mostrar mayores de 18 
 SELECT * FROM estudiantes WHERE edad > 18;
---Mostrar rango entre 18 y 25
+-- Mostrar rango entre 18 y 25
 SELECT * FROM  estudiantes WHERE edad BETWEEN 18 AND 25;
---Mostrar estudiante del curso Badee de Datos
+-- Mostrar estudiante del curso Badee de Datos
 SELECT * FROM estudiantes WHERE curso = 'Base de Datos';
---Mostrar estudiantes reegiestrados despues de 2026-03-01
+-- Mostrar estudiantes reegiestrados despues de 2026-03-01
 SELECT * FROM estudiantes WHERE fecha_registro > '2026-03-01';
---Mostrar estudiantes registrados entre 2026-01-01 y 2026-04-30
+-- Mostrar estudiantes registrados entre 2026-01-01 y 2026-04-30
 SELECT * FROM estudiantes WHERE  fecha_registro BETWEEN '2026-01-01' AND '2026-04-30';
