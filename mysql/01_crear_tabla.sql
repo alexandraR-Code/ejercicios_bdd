@@ -51,6 +51,6 @@ UPDATE estudiantes SET fecha_registro = '2026-06-06' WHERE id_estudiante = 6;
 -- Cambiar varios campos al mismo tiempo 
 UPDATE estudiantes SET curso = 'Estetica', edad = 28, fecha_registro = '2025-05-15' WHERE id_estudiante = 8;
 -- Cambiar curso 
-UPDATE estudiantes SET curso = 'Inteligencia Artificial' WHERE curso = 'Decoracion' OR curso = 'Confeccion';
+UPDATE estudiantes SET curso = 'Inteligencia Artificial' WHERE id_estudiante IN(7, 8, 10);
 
 
