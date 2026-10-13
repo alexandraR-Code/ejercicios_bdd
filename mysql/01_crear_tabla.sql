@@ -45,13 +45,13 @@ SELECT * FROM estudiantes WHERE fecha_registro > '2026-03-01';
 -- Mostrar estudiantes registrados entre 2026-01-01 y 2026-04-30
 SELECT * FROM estudiantes WHERE  fecha_registro BETWEEN '2026-01-01' AND '2026-04-30';
 -- Cambiaar curso
-UPDATE estudiantes SET curso = 'Base de Datos' WHERE id_estudiante = 4;
+UPDATE estudiantes SET curso = 'Base de Datos', correo = 'juana@gmail.com' WHERE id_estudiante = 4;
 -- Cambiar edad 
 UPDATE estudiantes SET edad = 45 WHERE id_estudiante = 12;
 -- Cambiar fecha
 UPDATE estudiantes SET fecha_registro = '2026-06-06' WHERE id_estudiante = 6;
 -- Cambiar varios campos al mismo tiempo 
-UPDATE estudiantes SET curso = 'Estetica', edad = 28, fecha_registro = '2025-05-15' WHERE id_estudiante = 8;
+UPDATE estudiantes SET curso = 'Estetica', edad = 28, fecha_registro = '2025-05-15', correo = 'carolina.prieto@gmail.com' WHERE id_estudiante = 8;
 -- Cambiar curso 
 UPDATE estudiantes SET curso = 'Inteligencia Artificial' WHERE id_estudiante IN(7, 8, 10);
 -- Mostar como quedo la tabla 
@@ -68,5 +68,11 @@ DELETE FROM estudiantes WHERE nombres = 'Tania' AND id_estudiante > 0;
 DELETE FROM estudiantes WHERE apellidos = 'Gallegos' AND id_estudiante > 0;
 -- Mostrar como quedo la tabla
 SELECT * FROM estudiantes;
+-- Mostrar correo 
+SELECT * FROM estudiantes WHERE correo = 'luciana@gmail.com';
+-- Mostrar nombre y correo
+SELECT nombres, correo FROM estudiantes;
+-- Mostrar 
+
 
 
