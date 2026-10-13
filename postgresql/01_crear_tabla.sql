@@ -52,16 +52,19 @@ UPDATE estudiantes SET fecha_registro = '2026-06-06' WHERE id_estudiante = 6;
 UPDATE estudiantes SET curso = 'Estetica', edad = 28, fecha_registro = '2025-05-15' WHERE id_estudiante = 8;
 -- Cambiar curso 
 UPDATE estudiantes SET curso = 'Inteligencia Artificial' WHERE id_estudiante IN(7, 8, 10);
+-- Mostar como quedo la tabla 
+SELECT * FROM estudiantes;
 -- Eliminar por ID 
 DELETE FROM estudiantes WHERE id_estudiante = 13;
 -- Eliminar por curso
-DELETE FROM estudiantes WHERE curso = 'Estetica';
+DELETE FROM estudiantes WHERE curso = 'Estetica' AND id_estudiante > 0;
 -- Eliminar por edad
-DELETE FROM estudiantes WHERE edad IN(44,10, 1);
+DELETE FROM estudiantes WHERE edad IN(44,10, 1) AND id_estudiante > 0;
 -- Eliminar por nombre
-DELETE FROM estudiantes WHERE nombres = 'Tania';
+DELETE FROM estudiantes WHERE nombres = 'Tania' AND id_estudiante > 0;
 -- Eliminar por apellido
-DELETE FROM estudiantes WHERE apellidos = 'Gallegos';
-
+DELETE FROM estudiantes WHERE apellidos = 'Gallegos' AND id_estudiante > 0;
+-- Mostrar como quedo la tabla
+SELECT * FROM estudiantes;
 
 
