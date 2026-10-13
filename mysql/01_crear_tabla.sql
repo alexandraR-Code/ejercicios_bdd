@@ -20,16 +20,17 @@ INSERT INTO estudiantes VALUES(3, 'Ana', 'Lopez', 23, 'Finanzas y negocios', '20
 INSERT INTO estudiantes VALUES(4, 'Juana', 'Castillo', 36, 'Estetica', '2023-02-03', 'juana@gmail.com');
 INSERT INTO estudiantes VALUES(5, 'Tania', 'Hernadez', 67, 'Decoracion', '2025-09-24', 'tania@gmail.com');
 INSERT INTO estudiantes VALUES(6, 'Luis', 'Cifuentes', 10, 'Expresion cultural', '2026-03-15', 'luis@gmail.com');
-INSERT INTO estudiantes VALUES(7, 'Santiago', 'Muete', 28, 'Defensa personal', '2026-09-20', 'santiago@gmail.com');
+INSERT INTO estudiantes VALUES(7, 'Santiago', 'Muete', 28, 'Programacion', '2026-03-20', 'santiago@gmail.com');
 INSERT INTO estudiantes VALUES(8, 'Carolina', 'Prieto', 30, 'Confeccion', '2024-03-11', 'carolina@gmail.com');
 INSERT INTO estudiantes VALUES(9, 'Maribel', 'Ballesteros', 18, 'Enfermeria', '2026-01-10', 'maribel@gmail.com');
-INSERT INTO estudiantes VALUES(10, 'David', 'Tellez', 54, 'Logistica', '2026-09-28', 'david@gmail.com');
+INSERT INTO estudiantes VALUES(10, 'David', 'Tellez', 54, 'Programacion', '2026-01-05', 'david@gmail.com');
 INSERT INTO estudiantes VALUES(11, 'Carolina', 'Prieto', 16, 'Estetica', '2025-01-05', 'carolina@gmail.com');
 INSERT INTO estudiantes VALUES(12, 'Samuel', 'Gallegos', 14, 'Artes', '2026-04-13', 'samuel@gmail.com');
 INSERT INTO estudiantes VALUES(13, 'Julian', 'Ramirez', 7, 'Ingles', '2023-10-12', 'julian@gmail.com');
 INSERT INTO estudiantes VALUES(14, 'Luciana', 'Muñoz', 13, 'Musica', '2024-06-25', 'luciana@gmail.com');
 INSERT INTO estudiantes VALUES(15, 'Mariana', 'Alfonso', 25, 'Estetica', '2025-10-11', 'mariana@gmail.com');
 INSERT INTO estudiantes VALUES(16, 'Tatiana', 'Rojas', 16, 'Base de Datos', '2026-09-27', 'tatiana@gmail.com');
+INSERT INTO estudiantes VALUES(17, 'Camila', 'Castillo', 33, 'Programacion', '2026-03-15', 'castillo@gmail.com');
 -- Consultas SELECT
 SELECT * FROM estudiantes;
 -- Mostrar unicamente nombres y curso
@@ -72,7 +73,16 @@ SELECT * FROM estudiantes;
 SELECT * FROM estudiantes WHERE correo = 'luciana@gmail.com';
 -- Mostrar nombre y correo
 SELECT nombres, correo FROM estudiantes;
--- Mostrar 
+-- Mostrar estudiantes registrados despues de 2026-02-01
+SELECT * FROM estudiantes WHERE fecha_registro > '2026-02-01';
+-- Mostrar estudiantes registrados antes de 2026-05-01
+SELECT * FROM estudiantes WHERE fecha_registro < '2026-05-01';
+-- Mostrar estudiantes registrados entre dos fechas
+ SELECT * FROM estudiantes WHERE fecha_registro BETWEEN '2026-01-01' AND '2026-06-30';
+-- Mostrar estudiantes registrados exactamente en 2026-03-15
+SELECT * FROM  estudiantes WHERE fecha_registro = '2026-03-15';
+-- Mostrar estudiantes registrados  en curso de Programacion registrados despues de 2026-01-01
+SELECT * FROM estudiantes WHERE curso = 'Programacion' AND fecha_registro > '2026-01-01';
 
 
 
